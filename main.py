@@ -42,13 +42,13 @@ ARIAL = pygame.font.match_font('arial')
 ###############################
 
 
-menu_bg = pygame.image.load('STARFALL\images\main_menu.webp')
+menu_bg = pygame.image.load(img_dir+'\main_menu.webp')
 menu_bg = pygame.transform.scale(menu_bg, (win_width, win_height))
 
-game_bg = pygame.image.load(r'D:\Machine-learning-projects\STARFALL\images\cartoon_space.webp')
+game_bg = pygame.image.load(img_dir+'\cartoon_space.webp')
 game_bg = pygame.transform.scale(game_bg, (win_width, win_height))
 
-rocket_img = pygame.image.load(r'D:\Machine-learning-projects\STARFALL\images\player.png')
+rocket_img = pygame.image.load(img_dir+'\player.png')
 rocket_img = pygame.transform.scale(rocket_img, (50, 50))  # Adjust the size as desired
 rocket_x = win_width // 2 - rocket_img.get_width() // 2
 rocket_y = win_height - rocket_img.get_height() - 20
@@ -56,14 +56,14 @@ rocket_speed = 1
 rocket_mini_img = pygame.transform.scale(rocket_img, (25, 19))
 rocket_mini_img.set_colorkey(BLACK)
 
-bullet_img = pygame.image.load(r'D:\Machine-learning-projects\STARFALL\images\laserRed.png')
+bullet_img = pygame.image.load(img_dir+'\laserRed.png')
 bullet_img = pygame.transform.scale(bullet_img, (10, 10))  # Adjust the size as desired
 bullet_x = 0
 bullet_y = rocket_y
 bullet_speed = 1
 bullet_state = "ready"
 
-meteor_img = pygame.image.load(r'STARFALL\images\enemyShip.png')
+meteor_img = pygame.image.load(img_dir+'\enemyShip.png')
 meteor_img = pygame.transform.scale(meteor_img, (50, 50))
 meteor_x = random.randint(0, win_width - meteor_img.get_width())
 meteor_y = -meteor_img.get_height()
