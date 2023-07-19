@@ -159,6 +159,10 @@ def start_game():
 
         win.blit(meteor_img, (meteor_x, meteor_y))
         meteor_y += meteor_speed
+        
+        if meteor_y > win_height:
+            meteor_x = random.randint(0, win_width - meteor_img.get_width())
+            meteor_y = -meteor_img.get_height()
 
 
 
