@@ -90,7 +90,7 @@ def display_menu():
     option_settings = font.render("Settings", True, (255, 255, 255))
 
 
-    menu_song = pygame.mixer.music.load(os.path.join(sound_folder, "main_menu.OGG")) 
+    menu_song = pygame.mixer.music.load(os.path.join(sound_folder, "string_main_menu.mp3")) 
     pygame.mixer.music.play(-1)
     while True:
         for event in pygame.event.get():
@@ -263,3 +263,4 @@ class Bullet(pygame.sprite.Sprite):
         ## adding an event for it in Game loop
 
 display_menu()
+print("f")
